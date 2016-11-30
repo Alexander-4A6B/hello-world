@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <title></title>
+        <meta>
+        <style>
+            
+            #blok{
+                position: absolute;
+                height: 50%;
+                width: 50%;
+                background-color: lightgrey;
+            }
+            
+            #button1{
+                position: absolute;
+                margin-top: 20%;
+                margin-left: 19%;
+            }
+            
+            #einde{
+                position: relative;
+                margin-top: 10%;
+                margin-left: 40%;
+            }
+            
+            #tekst1{
+                position: absolute;
+                margin-top: 10%;
+                margin-left: 20%;
+            }
+            
+            #einde1{
+                position: relative;
+                margin-top: 2%;
+                margin-left: 30%;
+            }
+            
+            #tekst2{
+                position: absolute;
+                margin-top: 2%;
+                margin-left: 20%;
+            }
+            
+            #blok1{
+                position: absolute;
+                height: 10%;
+                width: 40%;
+                margin-top: 5%;
+                margin-left: 19%;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div id="blok">
+        <button id="button1" onclick="myFunction()">Bereken</button>
+        
+        <div id="tekst1">Bedrag per stuk:</div>
+            
+        <input required type="text" id="einde"
+        name="mobiel" value = 12.95 /><br>
+            
+        <div id="tekst2">Aantal:</div>    
+            
+        <input required type="text" id="einde1"
+        name="mobiel" value = 3 /><br> 
+        
+        <div id="blok1"></div>
+        
+        </div>
+       
+        <script>
+            function myFunction() {
+                var bedrag = document.getElementById("einde").value; 
+                var aantal = document.getElementById("einde1").value;
+                var resultaat = bedrag * aantal
+                document.getElementById("blok1").innerHTML = "Het totaalbedrag is " + resultaat.toFixed(2);
+            }
+        </script>
+    </body>
+</html>
